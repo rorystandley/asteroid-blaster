@@ -24,18 +24,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
     // variable to output the current x, y & z values of the accelerometer
     var valueX;
 
-	var fastOne = document.querySelector(".one");
-	new FastClick(fastOne);
-
-	var fastTwo = document.querySelector(".two");
-	new FastClick(fastTwo);
-
-	var fastThree = document.querySelector(".three");
-	new FastClick(fastThree);
-
-	var fastFour = document.querySelector(".four");
-	new FastClick(fastFour);
-
     // when PhoneGap tells us everything is ready, start watching the accelerometer
     function onDeviceReady() {
         valueX = document.getElementById("valueX");
