@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ViewChild, ElementRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  @ViewChild('canvas', { static: true }) canvas: ElementRef | undefined;
+
+  constructor() { }
+
+  ngAfterViewInit() {
+    let context = this.canvas?.nativeElement.getContext('2d');
+  }
 
 }
